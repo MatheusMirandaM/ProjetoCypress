@@ -7,7 +7,7 @@ describe('Should teste at a functional level', () => {
         cy.visit('/')
         cy.login('matheusbatista0494@gmail.com', 'Crvg1002')
         cy.resetApp()
-
+   
         // cy.get(loc.LOGIN.USER).type('matheusbatista0494@gmail.com')
         // cy.get(loc.LOGIN.PASSWORD).type('Crvg1002')
         // cy.get(loc.LOGIN.BTN_LOGIN).click()
@@ -100,5 +100,12 @@ describe('Should teste at a functional level', () => {
     //     cy.xpath(loc.SALDO.FN_XP_SALDO_CONTA('Conta alterada')).should('contain', '123,00')
         
     // })
+    it('Should remove a transaction', () => {
+
+        cy.get(loc.MENU.EXTRATO).click()
+        cy.xpath(loc.EXTRATO.FN_XP_REMOVER_ELEMENTO('Desc')).click()
+        cy.get(loc.MESSAGE).should('contain', 'sucesso')
+        
+    })
 
 })
