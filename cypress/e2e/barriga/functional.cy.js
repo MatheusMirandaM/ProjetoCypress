@@ -4,7 +4,7 @@ describe('Should teste at a functional level', () => {
 
     beforeEach(() => {
 
-        cy.visit('/')
+        cy.visit('http://barrigareact.wcaquino.me')
         cy.login('matheusbatista0494@gmail.com', 'Crvg1002')
         cy.resetApp()
    
