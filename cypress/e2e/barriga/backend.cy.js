@@ -74,11 +74,11 @@ describe('Should test at a functional level', () => {
                         conta_id: contaId,
                         data_pagamento: Cypress.moment().add({ days: 1 }).format('DD/MM/YYYY'),
                         data_transacao: Cypress.moment().format('DD/MM/YYYY'),
-                        descricao: 'desc',
-                        envolvido: 'inter',
+                        descricao: "desc",
+                        envolvido: "inter",
                         status: true,
-                        tipo: 'REC',
-                        valor: '123',
+                        tipo: "REC",
+                        valor: "123",
                     }
                 }).as('response')
             })
